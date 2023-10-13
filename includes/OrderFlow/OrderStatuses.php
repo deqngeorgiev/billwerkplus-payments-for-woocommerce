@@ -226,7 +226,7 @@ class OrderStatuses {
 	 *
 	 * @return string
 	 */
-	public static function get_authorized_order_status( WC_Order $order, string $default = 'on-hold' ): string {
+	public static function get_authorized_order_status( WC_Order $order, string $default = 'processing' ): string {
 		if ( self::$status_sync_enabled && rp_is_order_paid_via_reepay( $order ) && ! order_contains_subscription( $order ) ) {
 			return self::$status_authorized;
 		}
