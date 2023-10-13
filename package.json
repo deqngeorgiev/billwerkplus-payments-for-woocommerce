@@ -1,0 +1,43 @@
+{
+  "name": "reepay-woocommerce-payment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^5.0.0",
+    "yargs": "^17.7.1"
+  },
+  "devDependencies": {
+    "fs-extra": "^11.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-if": "^3.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify-es": "^3.0.0",
+    "sass": "^1.62.1"
+  },
+  "scripts": {
+    "start": "gulp watch",
+    "build:dev": "gulp build",
+    "build": "gulp build --production",
+    "zip": "bash bin/zip.sh",
+    "phpcs": "bash ./bin/phpcs.sh",
+    "phpcs:full": "bash ./bin/phpcs.sh -full",
+    "phpcs:fix": "bash ./bin/phpcs.sh -fix",
+    "phpcs:tests": "bash ./bin/phpcs.tests.sh",
+    "phpcs:tests:full": "bash ./bin/phpcs.tests.sh -full",
+    "phpcs:tests:fix": "bash ./bin/phpcs.tests.sh -fix",
+    "phpunit": "set PHPUNIT_PLUGINS=woo,woo_subs,rp_subs & php ./vendor/bin/phpunit",
+    "phpunit:full": "bash ./bin/phpunit-test-with-plugins.sh",
+    "phpunit:init": "bash bin/install-wp-tests.sh wp_phpunit root ''"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reepay/reepay-woocommerce-payment/"
+  },
+  "author": "AAIT",
+  "license": "SEE LICENSE IN License.txt",
+  "homepage": "https://github.com/reepay/reepay-woocommerce-payment/"
+}

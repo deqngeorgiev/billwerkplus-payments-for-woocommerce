@@ -1,0 +1,26 @@
+#payment {
+    .reepay-logos li {
+        list-style: none;
+    }
+
+    li.payment_method_reepay_applepay,
+    li.payment_method_reepay_googlepay{
+        display: none;
+    }
+
+    .payment_methods li label {
+        display: flex !important;
+        align-items: center;
+
+        .reepay-logos {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 0 0 auto;
+            justify-content: flex-end;
+
+            .reepay-logo img {
+                margin: .25rem;
+            }
+        }
+    }
+}
